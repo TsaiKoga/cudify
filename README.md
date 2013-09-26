@@ -26,26 +26,23 @@ It's convinient for you.
 This gem can help you quickly create, update or delete the records, if you follow the rule below:
 
 ###CREATE RECORDS:
-
-	You just use the ActiveRecord method cudify or cudify!, the parameters is like the original records
-	example:
+You just use the ActiveRecord method cudify or cudify!, the parameters is like the original records
+example:
 
 		User.cudify!(name: "TsaiKoga", sex: "man", age: 23)
 
 ###DESTROY RECORDS:
-
-  If you want to destroy records, the first thing is you need to know their ids, and set hash like them below:
-	example:
+If you want to destroy records, the first thing is you need to know their ids, and set hash like them below:
+example:
 
 		User.cudify!(id:1, name:"TsaiKoga", _destroy: 1)
 		User.cudify!([{id:1, name:"TsaiKoga", _destroy: 1}, {id:2, _destroy: 1}])
 
-	Remember: the symbol _destroy is important!
+Remember: the symbol _destroy is important!
 
 ###UPDATE RECORDS:
-
-	If you want to update records, you must know their ids and put them into hash.
-	example:
+If you want to update records, you must know their ids and put them into hash.
+example:
 
 		User.cudify!(name: "CKJ", sex: "man")
 
