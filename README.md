@@ -21,9 +21,11 @@ Or install it yourself as:
     $ gem install cudify
 
 ## Usage
-It's convinient for you.
+Firstly, it must add require cudify to your enviroment(in config/environment.rb):
 
-This gem can help you quickly create, update or delete the records, if you follow the rule below:
+   require "cudify"
+
+This gem can help you quickly create, update or delete the records(you can try it by console), if you follow the rule below:
 
 ###CREATE RECORDS:
 You just use the ActiveRecord method cudify or cudify!, the parameters is like the original records
