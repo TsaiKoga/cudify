@@ -19,11 +19,16 @@ Gem::Specification.new do |spec|
 		  If you want to destroy records, the first thing is you need to know their ids, and set hash like them below:
 			example:
 				User.cudify!(id:1, name:"TsaiKoga", _destroy: 1)
+				User.cudify!([{id:1, name:"TsaiKoga", _destroy: 1}, {id:2, _destroy: 1}])
 			Remember: the symbol _destroy is important!
 		UPDATE RECORDS:
 			If you want to update records, you must know their ids and put them into hash.
 			example:
 				User.cudify!(name: "CKJ", sex: "man")
+
+		It also supports accept_nested_attributes, for examples:( user has many appliances )
+		CREATE RECORDS:
+			User.cudify!({name: "TsaiKoga", sex: "man", age: 23, appliances_attributes: [{name: "labtop", price: 4300.0}, {name: "pen", price: 5}]})
 	}
   spec.summary       = %q{This gem is used to create, delete or update records.}
   spec.homepage      = ""
