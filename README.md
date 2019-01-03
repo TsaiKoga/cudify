@@ -23,17 +23,17 @@ Or install it yourself as:
 ## Usage
 Firstly, it must add require cudify to your enviroment(in config/environment.rb):
 
-   require "cudify"
+    require "cudify"
 
 This gem can help you quickly create, update or delete the records(you can try it by console), if you follow the rule below:
 
-###CREATE RECORDS:
+### CREATE RECORDS:
 You just use the ActiveRecord method cudify or cudify!, the parameters is like the original records
 example:
 
 		User.cudify!(name: "TsaiKoga", sex: "man", age: 23)
 
-###DESTROY RECORDS:
+### DESTROY RECORDS:
 If you want to destroy records, the first thing is you need to know their ids, and set hash like them below:
 example:
 
@@ -42,7 +42,7 @@ example:
 
 Remember: the symbol _destroy is important!
 
-###UPDATE RECORDS:
+### UPDATE RECORDS:
 If you want to update records, you must know their ids and put them into hash.
 example:
 
