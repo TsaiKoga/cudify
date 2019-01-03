@@ -50,9 +50,11 @@ example:
 
 It also supports accept_nested_attributes, for examples:( user has many appliances )
 
-###CREATE RECORDS WITH ACCEPT NESTED ATTRIBUTES:
+### CREATE RECORDS WITH ACCEPT NESTED ATTRIBUTES:
 
-	User.cudify!({name: "TsaiKoga", sex: "man", age: 23, appliances_attributes: [{name: "labtop", price: 4300.0}, {name: "pen", price: 5}]})
+	User.cudify!({name: "TsaiKoga", sex: "man", age: 23, 
+		appliances_attributes: [{name: "labtop", price: 4300.0}, {name: "pen", price: 5}]
+	})
 
 ## Contributing
 
